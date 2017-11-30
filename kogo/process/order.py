@@ -38,7 +38,8 @@ def find_order_info(message_summary):
 
     order_info = {
         "order_number": [],
-        "tracking_number": []
+        "tracking_number": [],
+        "is_order": True
     }
     msg_splits = [part for part in message_summary["text"].splitlines() if len(part)]
     for msg_split in msg_splits:

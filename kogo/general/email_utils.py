@@ -62,7 +62,7 @@ def get_mime_message(message):
         if isinstance(message_summary[field], email.header.Header):
             message_summary[field] = str(message_summary[field])
     try:
-        if "order" in msg["Subject"].lower():
+        if "order" in msg["Subject"].__str__().lower():
             message_summary["text"] = get_text_from_email(msg)
     except Exception as e:
         print(e)
